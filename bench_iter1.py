@@ -7,7 +7,7 @@ from integrate import integrate
 
 
 def measure() -> None:
-    """Провести серию замеров времени работы integrate() для разного n_iter."""
+
     args = (math.cos, 0, math.pi / 2)
     for n_iter in (10 ** 3, 10 ** 4, 10 ** 5, 10 ** 6):
         t = timeit.timeit(
