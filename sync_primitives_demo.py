@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Итерация 5*. Оценка целесообразности примитивов синхронизации
 (семафор, мьютекс) для задачи integrate_async.
 
@@ -28,7 +27,7 @@ def integrate_shared_no_lock(f: Callable[[float], float], a: float, b: float, *,
         s = 0.0
         for i in range(step_inner_iter):
             s += f(lo + i * local_step) * local_step
-        acc[0] += s  # потенциальная гонка данных при работе без GIL (nogil-код)
+        acc[0] += s
 
     threads = [
         threading.Thread(target=worker, args=(a + i * step_outer, a + (i + 1) * step_outer))
@@ -54,7 +53,7 @@ def integrate_shared_with_lock(f: Callable[[float], float], a: float, b: float, 
         s = 0.0
         for i in range(step_inner_iter):
             s += f(lo + i * local_step) * local_step
-        with lock:  # синхронизация нужна ТОЛЬКО из-за общего изменяемого acc
+        with lock:
             acc[0] += s
 
     threads = [

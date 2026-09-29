@@ -370,38 +370,37 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
     Click on a line that starts with a "<code>+</code>" to see the C code that Cython generated for it.
 </p>
 <p>Raw output: <a href="integrate_cython.c">integrate_cython.c</a></p>
-<div class="cython"><pre class="cython line score-8" onclick="(function(f,s,c){c=f.nodeValue=='+';s.display=c?'block':'none';f.nodeValue=c?'−':'+'})(this.firstChild,this.nextElementSibling.style)">+<span class="">01</span>: <span class="c"># cython: language_level=3</span></pre>
+<div class="cython"><pre class="cython line score-8" onclick="(function(f,s,c){c=f.nodeValue=='+';s.display=c?'block':'none';f.nodeValue=c?'−':'+'})(this.firstChild,this.nextElementSibling.style)">+<span class="">01</span>: <span class="sd">"""Итерация 4. Сайтонизированная версия integrate().</span></pre>
 <pre class='cython code score-8 '>  __pyx_t_5 = <span class='pyx_c_api'>__Pyx_PyDict_NewPresized</span>(0);<span class='error_goto'> if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 1, __pyx_L1_error)</span>
   <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_5);
   if (<span class='py_c_api'>PyDict_SetItem</span>(__pyx_mstate_global-&gt;__pyx_d, __pyx_mstate_global-&gt;__pyx_n_u_test, __pyx_t_5) &lt; (0)) <span class='error_goto'>__PYX_ERR(0, 1, __pyx_L1_error)</span>
   <span class='pyx_macro_api'>__Pyx_DECREF</span>(__pyx_t_5); __pyx_t_5 = 0;
-</pre><pre class="cython line score-0">&#xA0;<span class="">02</span>: <span class="sd">"""Итерация 4. Сайтонизированная версия integrate().</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">03</span>: </pre>
-<pre class="cython line score-0">&#xA0;<span class="">04</span>: <span class="sd">Компилировать: python setup_cython.py build_ext --inplace</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">05</span>: <span class="sd">"""</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">06</span>: </pre>
-<pre class="cython line score-11" onclick="(function(f,s,c){c=f.nodeValue=='+';s.display=c?'block':'none';f.nodeValue=c?'−':'+'})(this.firstChild,this.nextElementSibling.style)">+<span class="">07</span>: <span class="k">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="k">import</span> <span class="n">Callable</span></pre>
+</pre><pre class="cython line score-0">&#xA0;<span class="">02</span>: </pre>
+<pre class="cython line score-0">&#xA0;<span class="">03</span>: <span class="sd">Компилировать: python setup_cython.py build_ext --inplace</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">04</span>: <span class="sd">"""</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">05</span>: </pre>
+<pre class="cython line score-11" onclick="(function(f,s,c){c=f.nodeValue=='+';s.display=c?'block':'none';f.nodeValue=c?'−':'+'})(this.firstChild,this.nextElementSibling.style)">+<span class="">06</span>: <span class="k">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="k">import</span> <span class="n">Callable</span></pre>
 <pre class='cython code score-11 '>  {
     PyObject* const __pyx_imported_names[] = {__pyx_mstate_global-&gt;__pyx_n_u_Callable};
-    __pyx_t_1 = <span class='pyx_c_api'>__Pyx_Import</span>(__pyx_mstate_global-&gt;__pyx_n_u_typing, __pyx_imported_names, 1, NULL, 0);<span class='error_goto'> if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 7, __pyx_L1_error)</span>
+    __pyx_t_1 = <span class='pyx_c_api'>__Pyx_Import</span>(__pyx_mstate_global-&gt;__pyx_n_u_typing, __pyx_imported_names, 1, NULL, 0);<span class='error_goto'> if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 6, __pyx_L1_error)</span>
   }
   __pyx_t_2 = __pyx_t_1;
   <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_2);
   {
     PyObject* const __pyx_imported_names[] = {__pyx_mstate_global-&gt;__pyx_n_u_Callable};
     __pyx_t_3 = 0; {
-      __pyx_t_4 = <span class='pyx_c_api'>__Pyx_ImportFrom</span>(__pyx_t_2, __pyx_imported_names[__pyx_t_3]);<span class='error_goto'> if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 7, __pyx_L1_error)</span>
+      __pyx_t_4 = <span class='pyx_c_api'>__Pyx_ImportFrom</span>(__pyx_t_2, __pyx_imported_names[__pyx_t_3]);<span class='error_goto'> if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 6, __pyx_L1_error)</span>
       <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_4);
-      if (<span class='py_c_api'>PyDict_SetItem</span>(__pyx_mstate_global-&gt;__pyx_d, __pyx_imported_names[__pyx_t_3], __pyx_t_4) &lt; (0)) <span class='error_goto'>__PYX_ERR(0, 7, __pyx_L1_error)</span>
+      if (<span class='py_c_api'>PyDict_SetItem</span>(__pyx_mstate_global-&gt;__pyx_d, __pyx_imported_names[__pyx_t_3], __pyx_t_4) &lt; (0)) <span class='error_goto'>__PYX_ERR(0, 6, __pyx_L1_error)</span>
       <span class='pyx_macro_api'>__Pyx_DECREF</span>(__pyx_t_4); __pyx_t_4 = 0;
     }
   }
   <span class='pyx_macro_api'>__Pyx_DECREF</span>(__pyx_t_2); __pyx_t_2 = 0;
-</pre><pre class="cython line score-0">&#xA0;<span class="">08</span>: </pre>
-<pre class="cython line score-0">&#xA0;<span class="">09</span>: <span class="k">cimport</span><span class="w"> </span><span class="nn">cython</span></pre>
+</pre><pre class="cython line score-0">&#xA0;<span class="">07</span>: </pre>
+<pre class="cython line score-0">&#xA0;<span class="">08</span>: <span class="k">cimport</span><span class="w"> </span><span class="nn">cython</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">09</span>: </pre>
 <pre class="cython line score-0">&#xA0;<span class="">10</span>: </pre>
-<pre class="cython line score-0">&#xA0;<span class="">11</span>: </pre>
-<pre class="cython line score-80" onclick="(function(f,s,c){c=f.nodeValue=='+';s.display=c?'block':'none';f.nodeValue=c?'−':'+'})(this.firstChild,this.nextElementSibling.style)">+<span class="">12</span>: <span class="nd">@cython</span><span class="o">.</span><span class="n">boundscheck</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span></pre>
+<pre class="cython line score-80" onclick="(function(f,s,c){c=f.nodeValue=='+';s.display=c?'block':'none';f.nodeValue=c?'−':'+'})(this.firstChild,this.nextElementSibling.style)">+<span class="">11</span>: <span class="nd">@cython</span><span class="o">.</span><span class="n">boundscheck</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span></pre>
 <pre class='cython code score-80 '>/* Python wrapper */
 static PyObject *__pyx_pw_16integrate_cython_1integrate_cython(PyObject *__pyx_self, 
 #if CYTHON_VECTORCALL
@@ -442,51 +441,51 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
     PyObject ** const __pyx_pyargnames[] = {&amp;__pyx_mstate_global-&gt;__pyx_n_u_f,&amp;__pyx_mstate_global-&gt;__pyx_n_u_a,&amp;__pyx_mstate_global-&gt;__pyx_n_u_b,&amp;__pyx_mstate_global-&gt;__pyx_n_u_n_iter,0};
   PyObject* values[4] = {0,0,0,0};
     const Py_ssize_t __pyx_kwds_len = (__pyx_kwds) ? <span class='pyx_c_api'>__Pyx_NumKwargs_FASTCALL</span>(__pyx_kwds) : 0;
-    if (unlikely(__pyx_kwds_len &lt; 0)) <span class='error_goto'>__PYX_ERR(0, 12, __pyx_L3_error)</span>
+    if (unlikely(__pyx_kwds_len &lt; 0)) <span class='error_goto'>__PYX_ERR(0, 11, __pyx_L3_error)</span>
     if (__pyx_kwds_len &gt; 0) {
       switch (__pyx_nargs) {
         case  3:
         values[2] = <span class='pyx_c_api'>__Pyx_ArgRef_FASTCALL</span>(__pyx_args, 2);
-        if (!CYTHON_ASSUME_SAFE_MACROS &amp;&amp; unlikely(!values[2])) <span class='error_goto'>__PYX_ERR(0, 12, __pyx_L3_error)</span>
+        if (!CYTHON_ASSUME_SAFE_MACROS &amp;&amp; unlikely(!values[2])) <span class='error_goto'>__PYX_ERR(0, 11, __pyx_L3_error)</span>
         CYTHON_FALLTHROUGH;
         case  2:
         values[1] = <span class='pyx_c_api'>__Pyx_ArgRef_FASTCALL</span>(__pyx_args, 1);
-        if (!CYTHON_ASSUME_SAFE_MACROS &amp;&amp; unlikely(!values[1])) <span class='error_goto'>__PYX_ERR(0, 12, __pyx_L3_error)</span>
+        if (!CYTHON_ASSUME_SAFE_MACROS &amp;&amp; unlikely(!values[1])) <span class='error_goto'>__PYX_ERR(0, 11, __pyx_L3_error)</span>
         CYTHON_FALLTHROUGH;
         case  1:
         values[0] = <span class='pyx_c_api'>__Pyx_ArgRef_FASTCALL</span>(__pyx_args, 0);
-        if (!CYTHON_ASSUME_SAFE_MACROS &amp;&amp; unlikely(!values[0])) <span class='error_goto'>__PYX_ERR(0, 12, __pyx_L3_error)</span>
+        if (!CYTHON_ASSUME_SAFE_MACROS &amp;&amp; unlikely(!values[0])) <span class='error_goto'>__PYX_ERR(0, 11, __pyx_L3_error)</span>
         CYTHON_FALLTHROUGH;
         case  0: break;
         default: goto __pyx_L5_argtuple_error;
       }
       const Py_ssize_t kwd_pos_args = __pyx_nargs;
-      if (<span class='pyx_c_api'>__Pyx_ParseKeywords</span>(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "integrate_cython", 0) &lt; (0)) <span class='error_goto'>__PYX_ERR(0, 12, __pyx_L3_error)</span>
+      if (<span class='pyx_c_api'>__Pyx_ParseKeywords</span>(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values, kwd_pos_args, __pyx_kwds_len, "integrate_cython", 0) &lt; (0)) <span class='error_goto'>__PYX_ERR(0, 11, __pyx_L3_error)</span>
       for (Py_ssize_t i = __pyx_nargs; i &lt; 3; i++) {
-        if (unlikely(!values[i])) { <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("integrate_cython", 1, 3, 3, i); <span class='error_goto'>__PYX_ERR(0, 12, __pyx_L3_error)</span> }
+        if (unlikely(!values[i])) { <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("integrate_cython", 1, 3, 3, i); <span class='error_goto'>__PYX_ERR(0, 11, __pyx_L3_error)</span> }
       }
     } else if (unlikely(__pyx_nargs != 3)) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = <span class='pyx_c_api'>__Pyx_ArgRef_FASTCALL</span>(__pyx_args, 0);
-      if (!CYTHON_ASSUME_SAFE_MACROS &amp;&amp; unlikely(!values[0])) <span class='error_goto'>__PYX_ERR(0, 12, __pyx_L3_error)</span>
+      if (!CYTHON_ASSUME_SAFE_MACROS &amp;&amp; unlikely(!values[0])) <span class='error_goto'>__PYX_ERR(0, 11, __pyx_L3_error)</span>
       values[1] = <span class='pyx_c_api'>__Pyx_ArgRef_FASTCALL</span>(__pyx_args, 1);
-      if (!CYTHON_ASSUME_SAFE_MACROS &amp;&amp; unlikely(!values[1])) <span class='error_goto'>__PYX_ERR(0, 12, __pyx_L3_error)</span>
+      if (!CYTHON_ASSUME_SAFE_MACROS &amp;&amp; unlikely(!values[1])) <span class='error_goto'>__PYX_ERR(0, 11, __pyx_L3_error)</span>
       values[2] = <span class='pyx_c_api'>__Pyx_ArgRef_FASTCALL</span>(__pyx_args, 2);
-      if (!CYTHON_ASSUME_SAFE_MACROS &amp;&amp; unlikely(!values[2])) <span class='error_goto'>__PYX_ERR(0, 12, __pyx_L3_error)</span>
+      if (!CYTHON_ASSUME_SAFE_MACROS &amp;&amp; unlikely(!values[2])) <span class='error_goto'>__PYX_ERR(0, 11, __pyx_L3_error)</span>
     }
     __pyx_v_f = values[0];
-    __pyx_v_a = <span class='pyx_c_api'>__Pyx_PyFloat_AsDouble</span>(values[1]); if (unlikely((__pyx_v_a == (double)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 14, __pyx_L3_error)</span>
-    __pyx_v_b = <span class='pyx_c_api'>__Pyx_PyFloat_AsDouble</span>(values[2]); if (unlikely((__pyx_v_b == (double)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 14, __pyx_L3_error)</span>
+    __pyx_v_a = <span class='pyx_c_api'>__Pyx_PyFloat_AsDouble</span>(values[1]); if (unlikely((__pyx_v_a == (double)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 13, __pyx_L3_error)</span>
+    __pyx_v_b = <span class='pyx_c_api'>__Pyx_PyFloat_AsDouble</span>(values[2]); if (unlikely((__pyx_v_b == (double)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 13, __pyx_L3_error)</span>
     if (values[3]) {
-      __pyx_v_n_iter = <span class='pyx_c_api'>__Pyx_PyLong_As_int</span>(values[3]); if (unlikely((__pyx_v_n_iter == (int)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 14, __pyx_L3_error)</span>
+      __pyx_v_n_iter = <span class='pyx_c_api'>__Pyx_PyLong_As_int</span>(values[3]); if (unlikely((__pyx_v_n_iter == (int)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 13, __pyx_L3_error)</span>
     } else {
       __pyx_v_n_iter = ((int)((int)0x3E8));
     }
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("integrate_cython", 1, 3, 3, __pyx_nargs); <span class='error_goto'>__PYX_ERR(0, 12, __pyx_L3_error)</span>
+  <span class='pyx_c_api'>__Pyx_RaiseArgtupleInvalid</span>("integrate_cython", 1, 3, 3, __pyx_nargs); <span class='error_goto'>__PYX_ERR(0, 11, __pyx_L3_error)</span>
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -519,13 +518,13 @@ static PyObject *__pyx_pf_16integrate_cython_integrate_cython(CYTHON_UNUSED PyOb
   int __pyx_v_i;
   PyObject *__pyx_r = NULL;
 /* … */
-  __pyx_t_2 = <span class='pyx_c_api'>__Pyx_PyDict_NewPresized</span>(1);<span class='error_goto'> if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 12, __pyx_L1_error)</span>
+  __pyx_t_2 = <span class='pyx_c_api'>__Pyx_PyDict_NewPresized</span>(1);<span class='error_goto'> if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 11, __pyx_L1_error)</span>
   <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_2);
 /* … */
-  __pyx_t_4 = <span class='pyx_c_api'>__Pyx_PyDict_NewPresized</span>(1);<span class='error_goto'> if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 12, __pyx_L1_error)</span>
+  __pyx_t_4 = <span class='pyx_c_api'>__Pyx_PyDict_NewPresized</span>(1);<span class='error_goto'> if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 11, __pyx_L1_error)</span>
   <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_4);
-  if (<span class='py_c_api'>PyDict_SetItem</span>(__pyx_t_4, __pyx_mstate_global-&gt;__pyx_n_u_f, __pyx_mstate_global-&gt;__pyx_kp_u_Callable_float_float) &lt; (0)) <span class='error_goto'>__PYX_ERR(0, 12, __pyx_L1_error)</span>
-  __pyx_t_5 = <span class='pyx_c_api'>__Pyx_CyFunction_New</span>(&amp;__pyx_mdef_16integrate_cython_1integrate_cython, 0, __pyx_mstate_global-&gt;__pyx_n_u_integrate_cython, NULL, __pyx_mstate_global-&gt;__pyx_n_u_integrate_cython, __pyx_mstate_global-&gt;__pyx_d, ((PyObject *)__pyx_mstate_global-&gt;__pyx_codeobj_tab[0]));<span class='error_goto'> if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 12, __pyx_L1_error)</span>
+  if (<span class='py_c_api'>PyDict_SetItem</span>(__pyx_t_4, __pyx_mstate_global-&gt;__pyx_n_u_f, __pyx_mstate_global-&gt;__pyx_kp_u_Callable_float_float) &lt; (0)) <span class='error_goto'>__PYX_ERR(0, 11, __pyx_L1_error)</span>
+  __pyx_t_5 = <span class='pyx_c_api'>__Pyx_CyFunction_New</span>(&amp;__pyx_mdef_16integrate_cython_1integrate_cython, 0, __pyx_mstate_global-&gt;__pyx_n_u_integrate_cython, NULL, __pyx_mstate_global-&gt;__pyx_n_u_integrate_cython, __pyx_mstate_global-&gt;__pyx_d, ((PyObject *)__pyx_mstate_global-&gt;__pyx_codeobj_tab[0]));<span class='error_goto'> if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 11, __pyx_L1_error)</span>
   <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_5);
   #if CYTHON_COMPILING_IN_CPYTHON &amp;&amp; PY_VERSION_HEX &gt;= 0x030E0000
   <span class='py_c_api'>PyUnstable_Object_EnableDeferredRefcount</span>(__pyx_t_5);
@@ -534,55 +533,55 @@ static PyObject *__pyx_pf_16integrate_cython_integrate_cython(CYTHON_UNUSED PyOb
   <span class='pyx_c_api'>__Pyx_CyFunction_SetAnnotationsDict</span>(__pyx_t_5, __pyx_t_4);
   <span class='pyx_macro_api'>__Pyx_DECREF</span>(__pyx_t_2); __pyx_t_2 = 0;
   <span class='pyx_macro_api'>__Pyx_DECREF</span>(__pyx_t_4); __pyx_t_4 = 0;
-  if (<span class='py_c_api'>PyDict_SetItem</span>(__pyx_mstate_global-&gt;__pyx_d, __pyx_mstate_global-&gt;__pyx_n_u_integrate_cython, __pyx_t_5) &lt; (0)) <span class='error_goto'>__PYX_ERR(0, 12, __pyx_L1_error)</span>
+  if (<span class='py_c_api'>PyDict_SetItem</span>(__pyx_mstate_global-&gt;__pyx_d, __pyx_mstate_global-&gt;__pyx_n_u_integrate_cython, __pyx_t_5) &lt; (0)) <span class='error_goto'>__PYX_ERR(0, 11, __pyx_L1_error)</span>
   <span class='pyx_macro_api'>__Pyx_DECREF</span>(__pyx_t_5); __pyx_t_5 = 0;
-</pre><pre class="cython line score-0">&#xA0;<span class="">13</span>: <span class="nd">@cython</span><span class="o">.</span><span class="n">wraparound</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span></pre>
-<pre class="cython line score-8" onclick="(function(f,s,c){c=f.nodeValue=='+';s.display=c?'block':'none';f.nodeValue=c?'−':'+'})(this.firstChild,this.nextElementSibling.style)">+<span class="">14</span>: <span class="k">def</span><span class="w"> </span><span class="nf">integrate_cython</span><span class="p">(</span><span class="n">f</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">float</span><span class="p">],</span> <span class="nb">float</span><span class="p">],</span> <span class="nb">double</span> <span class="n">a</span><span class="p">,</span> <span class="nb">double</span> <span class="n">b</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="nb">int</span> <span class="n">n_iter</span><span class="o">=</span><span class="mf">1000</span><span class="p">):</span></pre>
-<pre class='cython code score-8 '>  __pyx_t_4 = <span class='pyx_c_api'>__Pyx_PyLong_From_int</span>(((int)0x3E8));<span class='error_goto'> if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 14, __pyx_L1_error)</span>
+</pre><pre class="cython line score-0">&#xA0;<span class="">12</span>: <span class="nd">@cython</span><span class="o">.</span><span class="n">wraparound</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span></pre>
+<pre class="cython line score-8" onclick="(function(f,s,c){c=f.nodeValue=='+';s.display=c?'block':'none';f.nodeValue=c?'−':'+'})(this.firstChild,this.nextElementSibling.style)">+<span class="">13</span>: <span class="k">def</span><span class="w"> </span><span class="nf">integrate_cython</span><span class="p">(</span><span class="n">f</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">float</span><span class="p">],</span> <span class="nb">float</span><span class="p">],</span> <span class="nb">double</span> <span class="n">a</span><span class="p">,</span> <span class="nb">double</span> <span class="n">b</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="nb">int</span> <span class="n">n_iter</span><span class="o">=</span><span class="mf">1000</span><span class="p">):</span></pre>
+<pre class='cython code score-8 '>  __pyx_t_4 = <span class='pyx_c_api'>__Pyx_PyLong_From_int</span>(((int)0x3E8));<span class='error_goto'> if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 13, __pyx_L1_error)</span>
   <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_4);
-  if (<span class='py_c_api'>PyDict_SetItem</span>(__pyx_t_2, __pyx_mstate_global-&gt;__pyx_n_u_n_iter, __pyx_t_4) &lt; (0)) <span class='error_goto'>__PYX_ERR(0, 12, __pyx_L1_error)</span>
+  if (<span class='py_c_api'>PyDict_SetItem</span>(__pyx_t_2, __pyx_mstate_global-&gt;__pyx_n_u_n_iter, __pyx_t_4) &lt; (0)) <span class='error_goto'>__PYX_ERR(0, 11, __pyx_L1_error)</span>
   <span class='pyx_macro_api'>__Pyx_DECREF</span>(__pyx_t_4); __pyx_t_4 = 0;
-</pre><pre class="cython line score-0">&#xA0;<span class="">15</span>: <span class="w">    </span><span class="sd">"""Вычислить интеграл методом левых прямоугольников (Cython-версия).</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">16</span>: </pre>
-<pre class="cython line score-0">&#xA0;<span class="">17</span>: <span class="sd">    Логика идентична :func:`integrate.integrate`, но переменные цикла и</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">18</span>: <span class="sd">    аккумулятор объявлены как типизированные C-переменные (``cdef double``,</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">19</span>: <span class="sd">    ``cdef int``), что убирает часть накладных расходов интерпретатора</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">20</span>: <span class="sd">    Python на арифметику и позволяет GCC сгенерировать более эффективный</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">21</span>: <span class="sd">    машинный код для цикла. Вызов самой функции ``f`` остаётся вызовом</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">22</span>: <span class="sd">    Python-объекта (через C-API), поэтому основной выигрыш в производительности</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">23</span>: <span class="sd">    даёт только цикл и арифметика вокруг него, а не сам вызов ``f``.</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">24</span>: </pre>
-<pre class="cython line score-0">&#xA0;<span class="">25</span>: <span class="sd">    :param f: интегрируемая функция одной вещественной переменной.</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">26</span>: <span class="sd">    :param a: нижний предел интегрирования.</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">27</span>: <span class="sd">    :param b: верхний предел интегрирования.</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">28</span>: <span class="sd">    :param n_iter: количество разбиений отрезка ``[a, b]``.</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">29</span>: <span class="sd">    :return: приближённое значение интеграла ``f`` на отрезке ``[a, b]``.</span></pre>
-<pre class="cython line score-0">&#xA0;<span class="">30</span>: <span class="sd">    """</span></pre>
-<pre class="cython line score-0" onclick="(function(f,s,c){c=f.nodeValue=='+';s.display=c?'block':'none';f.nodeValue=c?'−':'+'})(this.firstChild,this.nextElementSibling.style)">+<span class="">31</span>:     <span class="k">cdef</span><span class="w"> </span><span class="kt">double</span> <span class="nv">acc</span><span class="w"> </span><span class="o">=</span> <span class="mf">0.0</span></pre>
+</pre><pre class="cython line score-0">&#xA0;<span class="">14</span>: <span class="w">    </span><span class="sd">"""Вычислить интеграл методом левых прямоугольников (Cython-версия).</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">15</span>: </pre>
+<pre class="cython line score-0">&#xA0;<span class="">16</span>: <span class="sd">    Логика идентична :func:`integrate.integrate`, но переменные цикла и</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">17</span>: <span class="sd">    аккумулятор объявлены как типизированные C-переменные (``cdef double``,</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">18</span>: <span class="sd">    ``cdef int``), что убирает часть накладных расходов интерпретатора</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">19</span>: <span class="sd">    Python на арифметику и позволяет GCC сгенерировать более эффективный</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">20</span>: <span class="sd">    машинный код для цикла. Вызов самой функции ``f`` остаётся вызовом</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">21</span>: <span class="sd">    Python-объекта (через C-API), поэтому основной выигрыш в производительности</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">22</span>: <span class="sd">    даёт только цикл и арифметика вокруг него, а не сам вызов ``f``.</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">23</span>: </pre>
+<pre class="cython line score-0">&#xA0;<span class="">24</span>: <span class="sd">    :param f: интегрируемая функция одной вещественной переменной.</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">25</span>: <span class="sd">    :param a: нижний предел интегрирования.</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">26</span>: <span class="sd">    :param b: верхний предел интегрирования.</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">27</span>: <span class="sd">    :param n_iter: количество разбиений отрезка ``[a, b]``.</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">28</span>: <span class="sd">    :return: приближённое значение интеграла ``f`` на отрезке ``[a, b]``.</span></pre>
+<pre class="cython line score-0">&#xA0;<span class="">29</span>: <span class="sd">    """</span></pre>
+<pre class="cython line score-0" onclick="(function(f,s,c){c=f.nodeValue=='+';s.display=c?'block':'none';f.nodeValue=c?'−':'+'})(this.firstChild,this.nextElementSibling.style)">+<span class="">30</span>:     <span class="k">cdef</span><span class="w"> </span><span class="kt">double</span> <span class="nv">acc</span><span class="w"> </span><span class="o">=</span> <span class="mf">0.0</span></pre>
 <pre class='cython code score-0 '>  __pyx_v_acc = 0.0;
-</pre><pre class="cython line score-5" onclick="(function(f,s,c){c=f.nodeValue=='+';s.display=c?'block':'none';f.nodeValue=c?'−':'+'})(this.firstChild,this.nextElementSibling.style)">+<span class="">32</span>:     <span class="k">cdef</span><span class="w"> </span><span class="kt">double</span> <span class="nv">step</span><span class="w"> </span><span class="o">=</span> <span class="p">(</span><span class="n">b</span> <span class="o">-</span> <span class="n">a</span><span class="p">)</span> <span class="o">/</span> <span class="n">n_iter</span></pre>
+</pre><pre class="cython line score-5" onclick="(function(f,s,c){c=f.nodeValue=='+';s.display=c?'block':'none';f.nodeValue=c?'−':'+'})(this.firstChild,this.nextElementSibling.style)">+<span class="">31</span>:     <span class="k">cdef</span><span class="w"> </span><span class="kt">double</span> <span class="nv">step</span><span class="w"> </span><span class="o">=</span> <span class="p">(</span><span class="n">b</span> <span class="o">-</span> <span class="n">a</span><span class="p">)</span> <span class="o">/</span> <span class="n">n_iter</span></pre>
 <pre class='cython code score-5 '>  __pyx_t_1 = (__pyx_v_b - __pyx_v_a);
 
   if (unlikely(__pyx_v_n_iter == 0)) {
     <span class='py_c_api'>PyErr_SetString</span>(PyExc_ZeroDivisionError, "float division");
-    <span class='error_goto'>__PYX_ERR(0, 32, __pyx_L1_error)</span>
+    <span class='error_goto'>__PYX_ERR(0, 31, __pyx_L1_error)</span>
   }
   __pyx_v_step = (__pyx_t_1 / ((double)__pyx_v_n_iter));
 
-</pre><pre class="cython line score-0">&#xA0;<span class="">33</span>:     <span class="k">cdef</span><span class="w"> </span><span class="kt">int</span> <span class="nv">i</span></pre>
-<pre class="cython line score-0" onclick="(function(f,s,c){c=f.nodeValue=='+';s.display=c?'block':'none';f.nodeValue=c?'−':'+'})(this.firstChild,this.nextElementSibling.style)">+<span class="">34</span>:     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_iter</span><span class="p">):</span></pre>
+</pre><pre class="cython line score-0">&#xA0;<span class="">32</span>:     <span class="k">cdef</span><span class="w"> </span><span class="kt">int</span> <span class="nv">i</span></pre>
+<pre class="cython line score-0" onclick="(function(f,s,c){c=f.nodeValue=='+';s.display=c?'block':'none';f.nodeValue=c?'−':'+'})(this.firstChild,this.nextElementSibling.style)">+<span class="">33</span>:     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_iter</span><span class="p">):</span></pre>
 <pre class='cython code score-0 '>  __pyx_t_2 = __pyx_v_n_iter;
   __pyx_t_3 = __pyx_t_2;
 
   for (__pyx_t_4 = 0; __pyx_t_4 &lt; __pyx_t_3; __pyx_t_4+=1) {
     __pyx_v_i = __pyx_t_4;
-</pre><pre class="cython line score-47" onclick="(function(f,s,c){c=f.nodeValue=='+';s.display=c?'block':'none';f.nodeValue=c?'−':'+'})(this.firstChild,this.nextElementSibling.style)">+<span class="">35</span>:         <span class="n">acc</span> <span class="o">+=</span> <span class="n">f</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">i</span> <span class="o">*</span> <span class="n">step</span><span class="p">)</span> <span class="o">*</span> <span class="n">step</span></pre>
-<pre class='cython code score-47 '>    __pyx_t_5 = <span class='py_c_api'>PyFloat_FromDouble</span>(__pyx_v_acc);<span class='error_goto'> if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 35, __pyx_L1_error)</span>
+</pre><pre class="cython line score-47" onclick="(function(f,s,c){c=f.nodeValue=='+';s.display=c?'block':'none';f.nodeValue=c?'−':'+'})(this.firstChild,this.nextElementSibling.style)">+<span class="">34</span>:         <span class="n">acc</span> <span class="o">+=</span> <span class="n">f</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">i</span> <span class="o">*</span> <span class="n">step</span><span class="p">)</span> <span class="o">*</span> <span class="n">step</span></pre>
+<pre class='cython code score-47 '>    __pyx_t_5 = <span class='py_c_api'>PyFloat_FromDouble</span>(__pyx_v_acc);<span class='error_goto'> if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 34, __pyx_L1_error)</span>
     <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_5);
     __pyx_t_7 = NULL;
     <span class='pyx_macro_api'>__Pyx_INCREF</span>(__pyx_v_f);
     __pyx_t_8 = __pyx_v_f; 
-    __pyx_t_9 = <span class='py_c_api'>PyFloat_FromDouble</span>((__pyx_v_a + (__pyx_v_i * __pyx_v_step)));<span class='error_goto'> if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 35, __pyx_L1_error)</span>
+    __pyx_t_9 = <span class='py_c_api'>PyFloat_FromDouble</span>((__pyx_v_a + (__pyx_v_i * __pyx_v_step)));<span class='error_goto'> if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 34, __pyx_L1_error)</span>
     <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_9);
     __pyx_t_10 = 1;
     #if CYTHON_UNPACK_METHODS
@@ -602,26 +601,26 @@ static PyObject *__pyx_pf_16integrate_cython_integrate_cython(CYTHON_UNUSED PyOb
       <span class='pyx_macro_api'>__Pyx_XDECREF</span>(__pyx_t_7); __pyx_t_7 = 0;
       <span class='pyx_macro_api'>__Pyx_DECREF</span>(__pyx_t_9); __pyx_t_9 = 0;
       <span class='pyx_macro_api'>__Pyx_DECREF</span>(__pyx_t_8); __pyx_t_8 = 0;
-      if (unlikely(!__pyx_t_6)) <span class='error_goto'>__PYX_ERR(0, 35, __pyx_L1_error)</span>
+      if (unlikely(!__pyx_t_6)) <span class='error_goto'>__PYX_ERR(0, 34, __pyx_L1_error)</span>
       <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_6);
     }
-    __pyx_t_8 = <span class='py_c_api'>PyFloat_FromDouble</span>(__pyx_v_step);<span class='error_goto'> if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 35, __pyx_L1_error)</span>
+    __pyx_t_8 = <span class='py_c_api'>PyFloat_FromDouble</span>(__pyx_v_step);<span class='error_goto'> if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 34, __pyx_L1_error)</span>
     <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_8);
-    __pyx_t_9 = <span class='pyx_c_api'>__Pyx_PyNumber_Multiply_object_float</span>(__pyx_t_6, __pyx_t_8);<span class='error_goto'> if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 35, __pyx_L1_error)</span>
+    __pyx_t_9 = <span class='pyx_c_api'>__Pyx_PyNumber_Multiply_object_float</span>(__pyx_t_6, __pyx_t_8);<span class='error_goto'> if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 34, __pyx_L1_error)</span>
     <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_9);
     <span class='pyx_macro_api'>__Pyx_DECREF</span>(__pyx_t_6); __pyx_t_6 = 0;
     <span class='pyx_macro_api'>__Pyx_DECREF</span>(__pyx_t_8); __pyx_t_8 = 0;
-    __pyx_t_8 = <span class='pyx_c_api'>__Pyx_PyNumber_InPlaceAdd_float_object</span>(__pyx_t_5, __pyx_t_9);<span class='error_goto'> if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 35, __pyx_L1_error)</span>
+    __pyx_t_8 = <span class='pyx_c_api'>__Pyx_PyNumber_InPlaceAdd_float_object</span>(__pyx_t_5, __pyx_t_9);<span class='error_goto'> if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 34, __pyx_L1_error)</span>
     <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_8);
     <span class='pyx_macro_api'>__Pyx_DECREF</span>(__pyx_t_5); __pyx_t_5 = 0;
     <span class='pyx_macro_api'>__Pyx_DECREF</span>(__pyx_t_9); __pyx_t_9 = 0;
-    __pyx_t_1 = <span class='pyx_c_api'>__Pyx_PyFloat_AsDouble</span>(__pyx_t_8); if (unlikely((__pyx_t_1 == (double)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 35, __pyx_L1_error)</span>
+    __pyx_t_1 = <span class='pyx_c_api'>__Pyx_PyFloat_AsDouble</span>(__pyx_t_8); if (unlikely((__pyx_t_1 == (double)-1) &amp;&amp; <span class='py_c_api'>PyErr_Occurred</span>())) <span class='error_goto'>__PYX_ERR(0, 34, __pyx_L1_error)</span>
     <span class='pyx_macro_api'>__Pyx_DECREF</span>(__pyx_t_8); __pyx_t_8 = 0;
     __pyx_v_acc = __pyx_t_1;
   }
 
-</pre><pre class="cython line score-6" onclick="(function(f,s,c){c=f.nodeValue=='+';s.display=c?'block':'none';f.nodeValue=c?'−':'+'})(this.firstChild,this.nextElementSibling.style)">+<span class="">36</span>:     <span class="k">return</span> <span class="n">acc</span></pre>
-<pre class='cython code score-6 '>  __pyx_t_8 = <span class='py_c_api'>PyFloat_FromDouble</span>(__pyx_v_acc);<span class='error_goto'> if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 36, __pyx_L1_error)</span>
+</pre><pre class="cython line score-6" onclick="(function(f,s,c){c=f.nodeValue=='+';s.display=c?'block':'none';f.nodeValue=c?'−':'+'})(this.firstChild,this.nextElementSibling.style)">+<span class="">35</span>:     <span class="k">return</span> <span class="n">acc</span></pre>
+<pre class='cython code score-6 '>  __pyx_t_8 = <span class='py_c_api'>PyFloat_FromDouble</span>(__pyx_v_acc);<span class='error_goto'> if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 35, __pyx_L1_error)</span>
   <span class='refnanny'>__Pyx_GOTREF</span>(__pyx_t_8);
   {
     PyObject *__pyx_temp;

@@ -1,4 +1,3 @@
-# cython: language_level=3
 """Итерация 5. Cython-версия integrate() с освобождением GIL (nogil).
 
 Функцию ``f`` вызывать без GIL нельзя (это произвольный Python-объект),

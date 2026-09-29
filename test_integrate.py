@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Юнит-тесты для функции integrate() (итерация 1)."""
 
 import math

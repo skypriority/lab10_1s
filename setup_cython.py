@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Сборка Cython-модуля integrate_cython."""
 
 from Cython.Build import cythonize

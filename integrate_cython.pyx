@@ -1,4 +1,3 @@
-# cython: language_level=3
 """Итерация 4. Сайтонизированная версия integrate().
 
 Компилировать: python setup_cython.py build_ext --inplace

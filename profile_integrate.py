@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Итерация 4. Профилирование чистой Python-версии integrate()."""
 
 import cProfile

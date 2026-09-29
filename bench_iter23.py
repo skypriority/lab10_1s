@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Итерации 2-3. Замеры времени работы integrate_async (потоки) и
 integrate_process (процессы) при n_jobs = 2, 4, 6, 8."""
 

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Итерация 4. Сравнение чистого Python и сайтонизированной версии integrate().
 
 Требует предварительной сборки: python setup_cython.py build_ext --inplace
@@ -12,7 +11,7 @@ from integrate_cython import integrate_cython
 
 def compare() -> None:
     """Сравнить время выполнения обычной и cython-версии integrate()."""
-    f = lambda x: x ** 2  # noqa: E731 - совпадает с исходным ноутбуком
+    f = lambda x: x ** 2  # noqa: E731
     args = (f, 0, 1)
     kwargs = {"n_iter": 10 ** 6}
 

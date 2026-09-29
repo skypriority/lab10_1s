@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Итерация 2. Оптимизация вычисления интеграла с помощью потоков (threading)."""
 
 import concurrent.futures as ftres

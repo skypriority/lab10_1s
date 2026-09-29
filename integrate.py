@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Итерация 1. Базовая (чистый Python) реализация метода прямоугольников."""
 
 from typing import Callable
