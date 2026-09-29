@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*-
-"""Итерация 1. Замеры времени выполнения integrate() с помощью timeit."""
-
 import math
 import timeit
 
