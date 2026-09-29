@@ -1,0 +1,9 @@
+build/
+*.pyd
+*.so
+*.o
+*.c
+venv313/
+venv313t/
+__pycache__/
+*.pyc
